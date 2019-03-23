@@ -5,8 +5,8 @@ services:
     environment:
       - ConnectionString=Server=containerizedlegacydb.database.windows.net;Database=eShopOnContainersServicesCatalogDb;User Id=adminlegacy;Password=PaSSw0rdC0dEmot1on
       - UseMockData=False
-      - UseCustomizationData=False
-      - UseAzureStorage=False
+      - UseCustomizationData=True
+      - UseAzureStorage=True
       - StorageConnectionString=DefaultEndpointsProtocol=https;AccountName=containerizedlagacystore;AccountKey=scOZf34KkNKn55p0PiAOlcqJdlUAqGyPCxIt1KEh+ay6DIucfwuc0muBi5F9Wytx8lXvTox0lRBhiF79PRbmoQ==;EndpointSuffix=core.windows.net
       - AppInsightsInstrumentationKey=51970741-aeb3-491a-bc29-8af52f386472
       - UseAzureActiveDirectory=false
@@ -14,7 +14,7 @@ services:
       - AzureActiveDirectoryTenant=3ee9c677-f8bd-4043-a37f-ebd59c2c9e48
       - PostLogoutRedirectUri=http://${ESHOP_EXTERNAL_DNS_NAME_OR_IP:-10.0.75.1}:5114/
     ports:
-      - "5114:80"
+      - "80:80"
 
 # sql.data:
 #  environment:
